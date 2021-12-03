@@ -34,12 +34,13 @@ let not = boolean => !boolean;
 console.log(`not: ${not(false)}`);
 
 // Problem #4
-let addOne = num => num + 1;
-console.log(`addOne: ${addOne(0)}`);
+// Not passing when the string "-5" is passed in, keeps contacting it to -51
+let addOne = num => Number(num + 1);
+console.log(`addOne: ${addOne(-5)}`);
 
 // Problem #5
-let isEven = num => num % 2 === 0;
-console.log(`isEven: ${isEven(4)}`);
+let isEven = num => Number(num % 2) === 0;
+console.log(`isEven: ${isEven(5)}`);
 
 // Problem #6
 let isIdentical = (num1, num2) => num1 === num2;
@@ -59,11 +60,12 @@ console.log(`and: ${and(true, false)}`);
 
 // Problem #10
 function concat (a, b) {
-    if (typeof a === "string" && typeof b === "string") {
-        return a + b;
-    } else if(typeof a === "number" && typeof b === "number") {
+    // Don't need any of the commented out stuff, leaving here for reference
+    // if (typeof a === "string" && typeof b === "string") {
+    //     return a + b;
+    // } else {
         return (a.toString() + b.toString());
-    }
+    // }
 }
 
 console.log(`concat: ${concat('blue','red')}`);

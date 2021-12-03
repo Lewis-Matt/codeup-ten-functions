@@ -166,7 +166,7 @@
       expect(addOne(randomNumber)).toBe(randomNumber + 1)
     })
     it('should return -4 when passed "-5"', () => {
-      expect(addOne("-5")).toBe(-4)
+      expect(addOne("-5")).toBe(-4);
     })
     it('should return Infinity when passed Infinity', () => {
       expect(addOne(Infinity)).toBe(Infinity)
